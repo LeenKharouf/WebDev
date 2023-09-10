@@ -1,4 +1,4 @@
-# Banana Bread -- A Healthier Take 
+# Banana Bread - A Healthier Take 
 
 ## Ingredients
 
@@ -12,7 +12,7 @@ Here's what you'll need:
 
 - **Sugar:** Choose your preferred type - brown, white, coconut sugar etc.
 
-- **Oil:** You can use avocado or melted coconut oil - Steer clear of processed vegetable oils.
+- **Butter:** Melted!
 
 - **Cinnamon:** Because who can resist that cozy cinnamon kick in banana bread?
 
@@ -57,7 +57,7 @@ Here's what you'll need:
 ---
 <br>
 
-## INSTRUCTIONS
+## Instructions
 <br>
 
 1. Preheat your oven to 180°C (360°F) and grease a loaf pan. If you want extra insurance against sticking, add parchment paper.

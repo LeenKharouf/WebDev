@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Character set attribute = charcater encoding. for e.g. some emojis not recognised on android, same with fonts -->
+    <meta charset="utf-8" />
+    <!-- viewport metatag = responsive rendering. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- browser tab title and google search -->
+    <title>HTML Elements</title>
+    <meta name = "description" content = "This will show up as teh text under the title in google search"/>
+    <!-- keywords for searching on google -->
+    <meta name = "keywords" content="HTML, CSS, tutorial" /> 
+    <meta name="author" content="Leen Kharouf" />
+  </head>
+  <body>
+    <!-- only one H1 per page for Heading -->
+    <h1 id="top">Hello, world!</h1>
+    <h2>This is heading 2</h2>
+    <h3>This is heading 3</h3>
+    <h4>This is heading 4</h4>
+    <h5>This is heading 5</h5>
+    <h6>This is heading 6</h6>  
+    <p>This is a page with some <em>basic</em> HTMl elements.
+    <!-- ITALIC AND BOLD TEXT-->
+    This will make it <em>ITALIC</em> and this will make it <strong>BOLD</strong>.</p>
+    <!-- self closing tags: br, hr, img -->
+    <hr> 
+    <p>
+      Here is a <br/> 
+      break in the line.
+    </p>
+    <!-- ORDERED LISTS: numbered -->
+    <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ol>
+    
+    <!-- UNORDERED LISTS: bullet points -->
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+
+    <!-- NESTING LISTS -->
+    <ol>
+      <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <ul>
+          <li>item A within 2</li>
+          <li>item B within 2</li>
+          <li>item C within 2</li>
+      </ul>
+      <li>item 3</li>
+      <li>item 4</li>
+    </ol>
+    </ol>
+    <!-- ANCHOR TAGS: links -->
+      <a href="https://www.google.com/" taget = "_blank">Open google in new tab</a>
+      <br/>
+      <a href="https://www.google.com/" taget = "_self">Open google in same tab</a>
+  
+    <!-- BACK TO TOP OF PAGE: see line 17 -->
+      <a href="#top">Back to top</a>
+
+      <br/>
+
+    <!-- load images from browser -->
+        <!-- from website -->
+      <img 
+        src="https://preppykitchen.com/wp-content/uploads/2019/10/Chocolate-Chip-Banana-Bread-Feature.jpg"
+      />
+        <!-- from file -->
+        <img 
+        src="img/bananaBread.jpg" title ="this will say banana bread when you hover" alt="this will show if the image won't load"
+      />
+      </body>
+
+
+</html>

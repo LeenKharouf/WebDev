@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Declare HTML doctype for file -->
+<html lang="en">
+    <head>
+        <!-- Character set sttribute specifies character encoding.
+        Failure to state this may result in malformed font characters -->
+        <meta charset="utf-8" />
+        <!-- Viewport metatag is required for proper responsive rendering -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Title tag is the first thing you see as google search result and the title in the broswer tab -->
+        <title>Layout 2: pixel based, percentage based and clear-fix class</title>
+        <style type="text/css">
+            body{
+                margin: 0;
+            }
+            
+            div, header, footer, section, aside, article, main{
+                min-height: 100px; 
+                background-color: rgba(0, 100, 255, 0.2) ; 
+            
+            }
+
+            main{
+                width: 960px;
+                margin: 0 auto;
+            }
+
+            /* Reusable class that adds a block of empty content with 0 height 
+            that will clear out both sides to avoid wrapping issues.
+            Use this class on the container/wrapper element.*/
+            .clearfix::after{
+                display: block; /*width 100% take up as much as you can */
+                clear: both;
+                /* to ensure cross browser compatibility */
+                height: 0;
+                font-size: 0; /* zeros out any extra */
+                content: ''; /* zeroing out content */
+                /* one last fallback */
+                visibility: hidden;
+            }
+
+            /* descendant selector for more specificity */
+            article.col-pixels section{
+                /* [960px wide container - 6(10)px margins]/3 = 300px */
+                /* columns have margins of 10 */
+                width: 300px;
+                margin: 0 10px; /* 0 margin on top/bottom and 10 on sides*/
+                float: left;
+            }
+
+            article.col-fluid section{
+                width: 20%;
+                margin: 2.5%;
+                float: left;
+            }
+
+        </style>
+        
+    </head>
+
+    <body>
+            <!-- Header and footer not included with out wrapper-->
+            <header>
+                A header element with width 100%. We will cover menus in the next example.
+            </header>
+
+            <main>
+                <h1>Article 1: Pixel Based</h1>
+                <!-- space when listing classes -->
+                <article class="col-pixels clearfix">
+                    <h3>Article with 3 vertical sections/columns</h3>
+                    <section><h3>Section 1</h3></section>
+                    <section><h3>Section 2</h3></section>
+                    <section><h3>Section 3</h3></section>
+                </article>
+            </main>
+
+            <h1>Article 2: Percent Based</h1>
+            <!-- fluid layout using % -->
+            <article class="col-fluid clearfix">
+                <h3>Article with 4 vertical sections/columns</h3>
+                <p>Note that this article is outside of main element - which has a set pixel width</p>
+                <!-- start stacking our sections after our headings and ps that display block aka 100% by default -->
+                <section><h3>Section 1</h3></section>
+                <section><h3>Section 2</h3></section>
+                <section><h3>Section 3</h3></section>
+                <section><h3>Section 4</h3></section>
+                <section><h3>Section 1</h3></section>
+                <section><h3>Section 2</h3></section>
+                <section><h3>Section 3</h3></section>
+                <section><h3>Section 4</h3></section>
+        
+            </article>
+            <footer>
+                Some footer text
+            </footer>
+
+    </body>
+
+  </html>

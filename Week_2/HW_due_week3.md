@@ -27,3 +27,50 @@ So it's important to deliberate over details before diving into screen design.
 # Part 3 & 4 - Layout of Recipe Page
 ![SiteMap](/img/figma.png)
 ![SiteMap](/img/figma2.png)
+
+<br>
+
+## Some CSS 
+header{
+	color: #FFF;
+	font-family: Inter;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+h1{
+	color: #FFF;
+	font-family: Inter;
+	font-size: 60px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+h2{
+	color: #FFF;
+	font-family: Inter;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+article{
+	width: 521px;
+	height: 692px;
+	flex-shrink: 0;
+	border-radius: 105px;
+	background: #FFFCFC;
+}
+
+nav{
+	color: #FFF;
+	font-family: Inter;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}

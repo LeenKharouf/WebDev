@@ -1,5 +1,5 @@
 # Part 1 - Site Map
-![SiteMap](/img/TastySiteMap.jpg)
+![SiteMap](TastySiteMap.jpg)
 
 <br>
 <br>
@@ -25,8 +25,8 @@ So it's important to deliberate over details before diving into screen design.
 <hr>
 
 # Part 3 & 4 - Layout of Recipe Page
-![SiteMap](/img/figma.png)
-![SiteMap](/img/figma2.png)
+![figma](/img/figma.png)
+![figma2](/img/figma2.png)
 
 <br>
 

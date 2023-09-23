@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Positioning</title>
+    <!-- Link to External Style Sheets Here -->
+    <style type="text/css">
+        /* any and every tag */
+        * { 
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: "Helvetica", Arial, sans-serif;
+        }
+
+        ul{
+            /* remove all bullet points */
+            list-style-type: none;
+            overflow: hidden;
+            background-color: royalblue;
+            /* make parent elements font size 0 because we're using an inline block
+            to stack out LI, inline block stacks each element like a letter in a word or paragraph,
+            making the font size 0 ensures no funky extra margins */
+            font-size: 0; 
+
+        }
+
+        li{
+            /* gives the box around the element dimensions, margins, paddings, no stacking */
+            display: inline-block;
+            font-size: 1rem; /*1 16px */
+
+        }
+
+        /* only anchor tags inside list items */
+        li a {
+            /* make sure link's clickable area is larger than just text */
+            display: block;
+            text-align: center;
+            /* each block has width 100 and padding 10 */
+            width: 100px;
+            padding: 10px;
+            text-decoration: none;
+            /* change link colour -> closer to 0 = closer to black */
+            color: #333; 
+        }
+
+        /* anchor tags inside lists items that are active */
+        li a.active{
+            background-color: lightskyblue;
+        }
+
+        /* when hovered on anchor tag in list */
+        li a:hover{
+            background-color: #111;
+            color: white;
+        }
+        
+        /* Positioning */
+        nav.fixed-nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #abs{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+
+            position: absolute;
+            /* positioned 200px from top of screen */
+            top: 0;
+            /* positioned 50% from left */
+            left: 50%;
+            /* controls the arrangment of the elements */
+            /* z-index: -100; */
+        }
+
+        #rel{
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+
+            position: relative;
+            /* moves relative to where it was supposed to be */
+            top: -100px;
+            right: -100px;
+        }
+
+        #rel-parent{
+            width: 500px;
+            height: 500px;
+            background-color: purple;
+
+            position: relative;
+            
+
+        }
+
+        #abs-child{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+
+            position: absolute;
+            /* this will be to the right of the window until you put a RELATIVE position on the parent ID */
+            right: 0;
+        }
+        
+
+    </style>
+  </head>
+  <body>
+    <nav class="fixed-nav">
+        <!-- for LINKS, the href tag closes AFTER the label -->
+        <ul>
+            <li><a href="#" class="active">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget laoreet lectus. Maecenas imperdiet orci 
+            a ligula placerat, id elementum libero congue. Duis ac mauris ipsum. Nulla facilisi. Cras at fringilla odio. 
+            Sed sit amet ipsum et mi tincidunt porttitor. Nam pharetra in tellus a pellentesque. Cras mattis ex nibh, 
+            sed rutrum diam porttitor eu. In a venenatis neque. Nullam efficitur maximus diam et accumsan. Nunc eu finibus velit. 
+            Ut vel elit hendrerit, vulputate enim eu, cursus urna. Vivamus facilisis rhoncus felis dapibus imperdiet. Cras at 
+            blandit purus, at dignissim augue.</p>
+            <br/>
+        <p>Curabitur maximus nec elit sit amet eleifend. Nam egestas metus bibendum ipsum finibus, vitae varius arcu consequat. 
+            Curabitur non ligula at sapien efficitur suscipit. Nullam aliquet elementum arcu, in molestie risus dapibus in. 
+            Vivamus egestas odio quis massa pharetra iaculis vel ut odio. Nulla faucibus orci est, eu vehicula nibh eleifend eu. 
+            Sed a vulputate tortor, nec tincidunt risus. Praesent est nisl, rutrum ac turpis vel, mollis mattis magna.</p>
+            <br/>
+        <p> Sed dictum orci ut orci finibus, eget feugiat quam facilisis. Donec vitae ex magna. Duis sed maximus sapien, vehicula 
+            imperdiet lorem. Praesent varius nisi elit, eu aliquam felis pulvinar eget. Sed maximus nibh ex, in bibendum velit 
+            finibus quis. Integer at ipsum et mauris efficitur consectetur. Sed eget neque sollicitudin, rhoncus sapien quis, fermentum 
+            purus. Duis ornare molestie laoreet. Proin turpis metus, tempus at feugiat sit amet, faucibus a augue. Pellentesque eget consequat ipsum. Nulla id lacinia mi, non porta est. Suspendisse non mauris turpis. </p>
+            <br/>
+        <p> Mauris eget enim vitae urna blandit scelerisque. Aliquam sed elit sit amet est condimentum finibus. Aenean at felis hendrerit, luctus nisi sit amet, dictum ipsum. Sed vulputate dictum magna, a pretium dolor cursus ac. Sed consectetur velit quis est cursus egestas. Donec ullamcorper tincidunt rhoncus. Donec condimentum metus id magna dictum, sed fringilla eros aliquet. Nullam sollicitudin ligula quis lorem egestas dapibus. Mauris mollis libero imperdiet ligula imperdiet egestas. Sed quis dui orci. Vivamus condimentum erat vel nulla rutrum feugiat. In sed mauris facilisis, aliquet mi vel, placerat turpis. Quisque vitae orci eros. Nullam id mattis orci, vitae lobortis nunc. Nullam ultrices nisl eget iaculis vestibulum. Mauris ullamcorper lacus turpis, at egestas nisi porttitor eu.</p>
+        <br/>
+        <p>Aenean pharetra sit amet nunc id volutpat. Phasellus ante tortor, blandit consectetur nibh sit amet, posuere dapibus velit. Quisque non dignissim elit. Phasellus porta efficitur dolor, vitae congue nisi condimentum quis. Nullam eleifend id sapien bibendum hendrerit. Morbi id congue nibh. Duis lobortis ipsum vitae molestie pharetra. Maecenas sed aliquam massa. Sed magna tortor, vulputate suscipit metus ac, finibus pulvinar magna. Mauris tincidunt enim vitae risus dictum commodo. Suspendisse vestibulum hendrerit luctus. Etiam luctus erat eros, ac sollicitudin lorem finibus vel. Proin a mi pharetra, laoreet magna non, vehicula tortor. Nunc vitae tellus et diam ornare laoreet vel at leo.</p>
+        <br/>
+        <div id="abs">
+            Absolute positioning with no parent positioning defined!
+        </div>
+
+        <div id="rel">
+            Relative positioned div with no parent positioning defined!
+        </div>
+
+        <div id="rel-parent">
+            <div id="abs-child">
+                
+            </div>
+        </div>
+    </main>
+  </body>
+</html>
+

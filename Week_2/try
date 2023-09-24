@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Navbar</title>
+    <!-- Link to External Style Sheets Here -->
+    <style type="text/css">
+        /* any and every tag */
+        * { 
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: "Helvetica", Arial, sans-serif;
+        }
+        
+    
+        ul{
+            /* remove all bullet points */
+            list-style-type: none;
+            overflow: hidden;
+            background-color: royalblue;
+            /* make parent elements font size 0 because we're using an inline block
+            to stack out LI, inline block stacks each element like a letter in a word or paragraph,
+            making the font size 0 ensures no funky extra margins */
+            font-size: 0; 
+            display: inline-block;
+
+        }
+
+        ul.left{
+            float: left;
+        }
+
+        ul.right{
+            float: right;
+        }
+
+        nav{
+            font-size: 0;
+            background-color: red;
+        }
+
+        li{
+            /* gives the box around the element dimensions, margins, paddings, no stacking */
+            display: inline-block;
+            font-size: 1rem; /*1 16px */
+
+        }
+
+        /* only anchor tags inside list items */
+        li a {
+            /* make sure link's clickable area is larger than just text */
+            display: block;
+            text-align: center;
+            /* each block has width 100 and padding 10 */
+            width: 100px;
+            padding: 10px;
+            text-decoration: none;
+            /* change link colour -> closer to 0 = closer to black */
+            color: #333; 
+        }
+
+        /* anchor tags inside lists items that are active */
+        li a.active{
+            background-color: lightskyblue;
+        }
+
+        /* when hovered on anchor tag in list */
+        li a:hover{
+            background-color: #111;
+            color: white;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <nav>
+        <!-- for LINKS, the href tag closes AFTER the label -->
+        <ul class="left">
+            <li><a href="#" class="active">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+
+        <ul class="right">
+            <li><a href="#" class="active">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+    </nav>
+  </body>
+</html>
+

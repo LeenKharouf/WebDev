@@ -121,6 +121,7 @@
             /* display:block; this removes the numbers */
             margin-bottom: 20px;
             color: white;
+            text-justify:auto;
             
         }
 
@@ -266,12 +267,30 @@
         footer h3{
             font-size: 15px;
             font-style:normal;
+            float: right;
         }
 
         footer{
-            text-align: center;
+            /* text-align: center;
+            justify-content: center;
+            justify-items: center;
+            text-justify: auto; */
             padding-top: 15px;
             min-height: 0;
+            float: left;
+            width: 100%;
+            padding-bottom: 20px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        a:hover{
+            color: white;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
         }
 
         nav.fixed-nav{

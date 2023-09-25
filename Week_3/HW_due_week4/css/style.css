@@ -17,27 +17,24 @@
         
         }
 
-    
-
         /* div with a class of wrapper */
         div.container{ 
-            width: 95%;
+            width: 1000px;
             /* margin 0 auto to center our wrapper div within browser window
             margin is on the outside of border*/
             margin: 0 auto; 
             /* 1 rem = 16px */
             /* margin-top: 1rem; */
             /* PADDING - adds pixels all around, inside border*/
-            padding: 30px;
+            /* padding: 30px; */
             padding-top: 0;
             
             justify-content: center;
             align-items: center;
-    
         }
 
         article{
-            width: 700px;
+            width: 500px;
             float: left; /*stacks from the left*/
             
         }
@@ -46,7 +43,7 @@
         aside{
             float: left;
             width:fit-content;
-            height: 800px;
+            height: 500px;
             background-color: white;
             border-radius: 105px;
             background: #FFFCFC;
@@ -54,25 +51,20 @@
             /* left margin away from the article div */
             margin-left: 130px;
             margin-top: 80px;
-            
             /* extra padding */
             padding: 10px;
             overflow: hidden;
-
             display: flex;
             /* keeps image in center */
             justify-content: center;
             align-items: center;
             text-align: center;
-        
         }
 
         aside img{
             border-radius: 105px;
             width: 95%;
-            height: 95%;
-            /* position: absolute; */
-            
+            height: 95%; 
         }
 
         .clearfix{
@@ -101,8 +93,6 @@
             font-style: normal;
             font-weight: 700;
             line-height: normal;
-            /* margin: 0; */
-
         }
 
         h3{
@@ -172,7 +162,6 @@
         }
 
         nav{
-
             box-shadow: 0 2px 14px 0 rgba(0,0,0,.2);            font-size: 0;
             font-family: Inter;
             font-size: 30px;
@@ -300,4 +289,6 @@
             right: 0;
             background-color: #D65738;
             max-height: 70px;
+
+            
         }

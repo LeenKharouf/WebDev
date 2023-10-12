@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Layouts</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <script>
+      function toggleMenu(){
+        // 
+        const element = document.getElementById('menu');
+        // if it already has class open, remove it, if not, add it
+        element.classList.toggle('open');
+      }
+
+    </script>
+
+  </head>
+  <body>
+
+    <header>
+      <h1 class="brand"><a href="#">Logo</a></h1>
+      <!-- this is the menu icon that's hidden by default on desktop/tablet but shown on mobile-->
+      <!-- wraps around with just as much space needed, displays inline -->
+      <span class="mobile-menu" onclick="toggleMenu()">
+        <span class="material-icons">
+          menu
+          </span>
+      </span>
+      <!-- main nav: always an unordered list of links -->
+      <nav>
+        <!-- menu class for styling, ID for javascript -->
+        <ul class="menu" id="menu">
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+
+      </nav>
+    </header>
+  </body>
+</html>
+
+
+<!-- 
+
+  https://developers.google.com/fonts/docs/material_symbols
+
+ -->

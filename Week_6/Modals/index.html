@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modal Windows</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <style type="text/css">
+
+        /* #info, #info2{
+            too redundant, so give them both the same class (below)
+        } */
+
+        .infoModal{
+            position: fixed; 
+            /* stretch to cover entire screen */
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* transparent grey background - black with 30% */
+            background-color: rgba(0, 0, 0, 0.3);
+            /* make sure this pops up OVER all other content */
+            z-index: 999999;
+            /* starting state of 0% opacity for our transition */
+            opacity: 0;
+            /* we always define a transition on the starting state */
+            transition: opacity 400ms ease-in; /* slow then speeds up - check */
+            /* disable all mouse events */
+            pointer-events: none;
+        }
+
+        .infoModal:target{
+            /* when targeted, clicking the  */
+            opacity: 1;
+            /* re-allow pointer events */
+            pointer-events: auto;
+
+        }
+
+
+        /* a div that is a direct descendant of something with infoModal */
+        .infoModal > div {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            /* makes sure its centered and down 10% form top of screen */
+            margin: 10% auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 20px;
+        }
+
+        .close{
+            height: 20px;
+            width: 20px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            /* when you absolute, tell it where */
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: center;
+            transition: all 1s ease;
+            line-height: 20px;
+            /* border-radius: 20px; */
+        }
+
+        .close:hover{
+            background-color: black;
+            color: white;
+        }
+
+        a.button{
+            text-decoration: none;
+            color: white;
+            background-color: purple;
+        }
+      
+    </style>
+  </head>
+  <body>
+
+    <a href="#info" class="button">Link to modal 1</a>
+    <a href="#info2" class="button">Link to modal 2</a>
+
+    <div id="info" class="infoModal">
+        <div>
+            <a href="#close"title="close" class="close">X</a>
+            <h2>Title of Modal 1</h2>
+            <p>look at me!! I'm the first modal!</p>
+        </div>
+
+    </div>
+
+    <div id="info2" class="infoModal">
+        <div>
+            <a href="#close"title="close" class="close">X</a>
+            <h2>Title of Modal 2</h2>
+            <p>look at me!! I'm the second modal!</p>
+        </div>
+
+    </div>
+
+    <h3> hi i am h3 </h3>
+
+  </body>
+</html>

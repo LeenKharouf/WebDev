@@ -1,0 +1,119 @@
+/* global styles */
+
+* {
+    /* when i say width, that includes borders and paddings */
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+a{
+    /* text-decoration: none; */
+    color: #333;
+}
+
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+/* Desktop styling */
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../img/grey_wash_wall.png);
+    padding: 0 2rem;
+    /* when we wanna absolute position a child element, we need to relative position the parent */
+    position: relative;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li a{
+    /* give it a bigger clickable area */
+    display: block;
+    padding: 1rem;
+}
+
+.menu li a:hover{
+    color: white;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.brand{
+    margin: 0;
+    font-weight: 200;
+}
+
+header a{
+    color: #aaa;
+    text-decoration: none;
+    /* padding: 10%; */
+} 
+
+.mobile-menu{
+    display: none;
+}
+
+
+/* Mobile media query */
+
+@media only screen and (max-width:767px) {
+    
+    body{
+        background-color: #aaa;
+    }
+
+    header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        text-align: center;
+        padding: 0;
+    }
+
+    .brand{
+        margin: 0.5rem;
+
+    }
+
+    .mobile-menu{
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        display: block;
+        font-size: 2rem;
+        color: #aaa;
+    }
+
+    .menu{
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        height: 0;
+
+    }
+
+    .menu.open{
+        height: auto;
+    }
+
+    .menu li{
+        border-bottom: 1px solid #aaa;
+    }
+
+
+}

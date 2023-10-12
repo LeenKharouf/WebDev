@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <!-- VERY IMPORTANT FOR PROPER RESPONSES -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Media Queries</title>
+        <link href="http://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <style type="text/css">
+
+            body{
+                margin: 0;
+                padding: 0;
+                font-family: Helvetica, Arial, sans-serif;
+                background-color: red;
+            }
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+            /* Desktop first, apply our default for desktops, then override for smaller screens */
+
+            header.header-flex{
+                display: flex; /* elements no longer display block (each take up entire width of screen)
+                header is a container: it stacks the children: h1 and nav (not the children of the chilcren)*/
+                
+                /* default is row */
+                flex-direction: row; 
+
+                /* for row mode: justify content is horizontal, align items is vertical; */
+                justify-content: space-between; 
+                /* because its parent is flex, this will align items center vertically */
+                align-items: center; 
+                /* this will make the text in the middle: align-text: center */
+            }
+
+            h1{
+                margin: 0;
+            }
+
+
+            nav.main-nav ul{
+                /* removes bullet points from list */
+                list-style-type: none; 
+
+                /* things inside the ul = li items will stack next to each other */
+                display: flex; 
+                padding: 0;
+
+            }
+
+            .main-nav li{
+                text-align: center;
+            }
+
+            .main-nav a{
+                /* makes the area around the text clickable */
+                display: block;
+                width: 3rem;
+                padding: 2rem;
+            }
+
+            .flex-container{
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 2rem;
+            }
+
+            .space-around{
+                justify-content: space-around;
+                background-color: rgba(0, 0, 230, 0.5);
+            }
+
+            .space-between{
+                justify-content: space-between;
+                background-color: rgba(0, 200, 300, 0.5);
+            }
+
+            .thumb{
+                min-height: 10rem;
+                background-color: blue;
+                width: 23%;
+                border: 1px solid white;
+            }
+
+            /* Tablet screen Sizes */
+            @media only screen and (min-width:768px) and (max-width:1024px){
+                body{
+                    background-color: green;
+                }
+
+                .flex-container{
+                    max-width: 1024px;
+                    flex-wrap: wrap;
+                }
+                .thumb{
+                    width: 48%;
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    margin: 1% 0; /* top-bottom left-right */
+                }
+            }
+                
+                @media only screen and (max-width:767px){
+                body{
+                    background-color: yellow;
+                }
+
+                header.header-flex{
+                    flex-direction: column;
+                }
+                
+                nav.main-nav ul{
+                    flex-direction: column;
+                }
+                .flex-container{
+                    width: 100%;
+                    padding: 0;
+                    flex-direction: column;
+                }
+                .thumb{
+                    width: 90%;
+                    margin: 2rem 0;
+                }
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <header class="header-flex">
+            <!-- logo on the left -->
+            <h1 class="logo">Logo</h1>
+            <!-- nav on the right -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- flex container with justify content space between: 4 wide on desktop, 2 on tablet, 1 on mobile -->
+        <div class="flex-container space-between">
+            <div class="thumb"><img src="https://placehold.co/600x400" alt="placeholder"/></div>
+            <div class="thumb"><img src="https://placehold.co/600x400" alt="placeholder"/></div>
+            <div class="thumb"><img src="https://placehold.co/600x400" alt="placeholder"/></div>
+            <div class="thumb"><img src="https://placehold.co/600x400" alt="placeholder"/></div>
+        </div>
+
+        <!-- flex container with justify content space around: 4 wide on desktop, 2 on tablet, 1 on mobile -->
+        <div class="flex-container space-around">
+            <div class="thumb"></div>
+            <div class="thumb"></div>
+            <div class="thumb"></div>
+            <div class="thumb"></div>
+        </div>
+
+    </body>
+
+</html>
+
+
+<!-- boilerplate css media quieries
+    css tricks
+-->

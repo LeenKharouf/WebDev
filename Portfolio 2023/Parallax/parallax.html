@@ -1,0 +1,140 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parallax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/css/uikit.min.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="../css/style_home.css">
+    <meta name="author" content="Leen Kharoud">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> -->
+
+
+    <style>
+    .intro article{    
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 30%;
+        overflow: hidden;
+        margin: 75px auto;
+        margin-top: 0;
+        padding-right: 10%;
+
+    }
+
+    .intro{
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 20%;
+        overflow: visible;
+    }
+
+    header{
+        padding-bottom: 100px;
+    }
+
+    main{
+        padding: 10%;
+        padding-top: 510px;
+    }
+
+   .intro p{
+        font-size: 20px;
+    }
+
+
+    </style>
+</head>
+
+
+<body>
+
+    <header>
+        <span class="mobile-menu" onclick="toggleMenu()">
+            <span class="material-icons">menu</span>
+        </span>
+
+        <a href="../home/home.html">
+            <img src="../img/LK_logo.png" alt="logo">
+          </a> 
+        
+        <!-- this is the menu icon that's hidden by default on desktop/tablet but shown on mobile-->
+        <!-- wraps around with just as much space needed, displays inline -->
+        <span class="mobile-menu" onclick="toggleMenu()">
+            <span class="material-icons">menu</span>
+        </span>
+        <!-- main nav: always an unordered list of links -->
+        <nav>
+        <!-- menu class for styling, ID for javascript -->
+        <ul class="menu" id="menu">
+            <li><a href="#">about</a></li>
+            <li><a href="#">projects</a></li>
+            <li><a href="#">art</a></li>
+        </ul>
+
+        </nav>
+  </header>
+
+  <div class="intro">
+    <article>
+    <h1>Parallax!</h1>
+    <p>
+        Mouse: click and drag
+        <br>Touch: press and move
+    </p>
+
+  </article>
+
+    <aside>
+        <div class="main-content"> <!-- Add the main content container -->
+            <div class="image-container">
+                <canvas class="canvas" width="900" height="1200" id="canvas"></canvas>
+            <div class="loading-screen" id="loading">Loading...</div>
+        </div>
+    </aside>
+    
+  </div>
+
+  <main>
+  <h1>Welcome to an Interactive Art Experience!</h1>
+
+    <h2>Using Procreate</h2>
+    <p>This illustration was created in Procreate! The key to this 3D effect is the use of layers. Just like stacking sheets, I arranged different elements of the artwork on separate layers.</p>
+    <br>
+
+
+    <h2>Unveiling the Parallax Effect</h2>
+    <p>Now comes the most exciting part — the parallax effect. I've arranged the layers to respond to your touch or mouse movements using Javascript. As you navigate the artwork, different layers move at different speeds, giving you a sense of depth and motion.</p>
+    <br>
+
+    <h2>Background</h2>
+    <p> Starting on this artistic journey means a lot to me because I've always had a deep love for art. I've been creating art for years, and it's been a big part of who I am. As a computer engineering student, my focus shifted away from art due to the demands of my studies.
+
+Now, I've found a way to bring together my technical skills and my passion for art. This artwork is the result of that mix—a way for me to reconnect with my creativity: my first experiment with the parallax effect, representing a step into the realm of interactive art.</p>
+    <br>
+
+    <br>
+</main>
+
+    <footer>
+        <p>© Leen Kharouf</p>
+        <br>
+        <p>Get in touch:</p>
+        
+        <p>leenkharouf@nyu.edu</p>
+        <img src="../img/giphy.gif" class="eyes"/>
+    
+    </footer>
+</body>
+
+<script type="text/javascript" src="../main.js"></script>
+
+</html>

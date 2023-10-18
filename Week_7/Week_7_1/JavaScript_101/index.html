@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Javascript Data Types</title>
+        <script type="text/Javascript">
+            // delcare a variable
+            
+            // var myVar; // works for all variable types
+            let myVar; // when we know that variable will change over time 
+            // const myVar; // a known constant value, cannot change
+
+            myVar = "number";
+            // delete these before pushing to production
+            console.log(myVar);
+            console.log("got here in the code");
+            console.log("myVar's value is: ", myVar);
+
+            //  we can also reassign a new value and new type to the same variable
+            myVar = 8;
+            myVar = "8"; // math works with this!
+            console.log("myVar's value is: ", myVar);
+            console.log(typeof myVar); // will output string 
+
+            // even though 8 is a string "8", we can still do math
+            const myVar2 = myVar * 2;
+            console.log(typeof myVar2); // will output number
+            
+            let temp = 9;
+            console.log("Today's temperature is", temp, "degrees C.")
+
+            // let's make a function!
+
+            const notDeletable = "I am global and can be used anywhere"
+            // declare and define a function
+            function sumVals(num1, num2) {
+                const deletable = "I'm dead outside of here";
+                // console.log(notDeletable);
+                var mySum = num1+num2;
+                // console.log(mySum);
+                return num1+num2;
+            }
+
+            console.log(notDeletable)
+            console.log(deletable) // undefined error
+
+            // execute function - will always run when we load page
+            console.log(sumVals(5,4));
+            var addedNumber = sumVals(10,12);
+            console.log(addedNumber);
+
+            var isOn = true;
+            
+            function switchOnOff(){
+                if(isOn == true){ // isOn = 'true' works as well
+                    console.log("isOn is currently", isOn  ,"switching to false now");
+                    isOn = false;
+                } else{
+                    console.log("isOn is currently", isOn  ,"switching to true now");
+                    isOn = true;
+                }
+            }
+
+
+
+            // switchOnOff();
+            // switchOnOff();
+
+            // a == 8
+            // a = 8 is true AND a = '8' is true
+        
+
+
+            // LOOPS & INCREMENTS
+
+            function countTo(n) {
+	                for(var i = 0; i <= n, i++){
+	                    console.log(i);
+	                }
+	            }
+	
+	            // countTo(8);
+
+        </script>
+    </head>
+    <body>
+        <button onclick="sumVals(10, 20)">Call sumVals function</button>
+        <button onclick="switchOnOff()">Toggle On/Off</button>
+        <button onclick="countTo(25)">Count to 25</button>
+    </body>
+</html>

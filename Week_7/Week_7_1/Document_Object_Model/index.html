@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Toggle Styles</title>
+        <style type="text/css">
+            .active{
+                background-color: white;
+                font-size: 60px;
+            }
+            
+        </style>
+
+        <script type="text/Javascript">
+            function toggleActive(){
+                // grab element to change
+                var element = document.getElementById('changeMe');
+                // check if element is already has the class applied to it
+                console.log(element);
+                // this toggles active in and out of classList, but cant change the tag
+                element.classList.toggle('active');
+
+                // if so, remove it
+
+                if(element.classList.contains('active')){
+                    element.classList.remove('active');
+                    // changing the content inside our tags
+                    element.innerHTML = "I'm not active anymore";
+                }else{
+                // if not, add it
+                    element.classList.add('active');
+                    element.innerHTML = "I'm now active"; // not the right way to do it
+
+                }
+            }
+            
+        
+        </script>
+    </head>
+    <body>
+        <h1 id="changeMe" onclick="toggleActive()">
+            This is a header, click me to change me content!
+        </h1>
+
+    </body>
+</html>

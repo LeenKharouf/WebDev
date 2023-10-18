@@ -68,6 +68,7 @@ footer{
     align-items: center;
     position: relative;
     clear: both;
+    /* margin-top: 300px; */
 }
 
 footer p{
@@ -226,8 +227,6 @@ material-symbols-outlined{
     overflow: hidden;
     margin: 24px auto;
     margin-top: 0;
-    align-items: center;
-    text-align: center;
 }
 
 .mask{
@@ -269,8 +268,6 @@ material-symbols-outlined{
 .thumb:hover .mask{
     opacity: 1;
 }
-
-
 
 /* main{
     background-color: black;
@@ -360,8 +357,6 @@ aside img{
     -webkit-background-clip: text;
     transform: translateX(-0.02em);
   }
-
-  
   
   /* end of projects title */
 
@@ -401,145 +396,6 @@ aside img{
 
 
 
-
-
-/* MEDIA QUERIES */
-/* Smaller than ipad classic in portrait so we will assume mobile  */
-@media only screen and (max-width:767px){
-
-    body{
-        background-color: white;
-    }
-
-    header{
-        flex-direction: column;
-        justify-content: center;
-        align-items: stretch;
-        text-align: center;
-        padding: 0;
-    }
-
-    .intro{
-        margin: 0.5rem;
-
-    }
-
-    .mobile-menu{
-        position: absolute;
-        right: 0.5rem;
-        top: 0.5rem;
-        display: block;
-        font-size: 2rem;
-        color: rgb(141, 141, 141);
-    }
-
-    .menu{
-        flex-direction: column;
-        width: 100vw;
-        overflow: hidden;
-        height: 0;
-
-    }
-
-    .menu.open{
-        height: auto;
-    }
-
-    .menu li{
-        border-bottom: 1px solid #aaa;
-    }
-
-    .container{
-        flex-direction: column;
-        padding: 12px;
-    }
-
-
-    header img{
-        width: 10%;
-        height: auto;
-        float: left;
-        padding: 10px;
-    }
-
-    .mask{
-        font-size: 20px;
-    }
-
-    h1{
-        font-size: 30px;
-    }
-
-    p{
-        font-size: 20px;
-    }
-
-    h2{
-        font-size: 30px;
-        margin-bottom: 30px;
-    }
-
-    header li{
-        font-size: 10px;
-    }
-
-
-    .intro{
-        padding: 10%;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .intro article{
-        flex-basis: 100%;
-        padding-right: 0;
-        padding-bottom: 0;
-    }
-
-
-    aside img{
-        border-radius: 50px;
-        padding-left: 30%;
-        padding-right: 30%;
-    }    
-
-    a.resume{
-        padding: 2% 1%;
-        right: 20%;
-        left: 20%;
-        top: -100px;
-    }
-
-
-    .intro aside{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-    }
-
-
-    .menu li a{
-        font-size: 20px;
-        background-color: rgb(246, 246, 246);
-    
-    }
-    
-    .menu li a:hover{
-        background-color: rgb(233, 233, 233);
-        color: black;
-    }
-
-    .intro p{
-        font-size: 20px;
-    }
-
-}
-
-
-
-
-
 /* tablet size */
 @media only screen and (min-width: 768px) and (max-width:1024px){
 
@@ -560,8 +416,8 @@ aside img{
         font-size: 40px;
     }
 
-    .intro p{
-        font-size: 25px;
+    p{
+        font-size: 20px;
     }
 
     h2{
@@ -585,35 +441,6 @@ aside img{
         font-size: 15px;
     }
 
+    
 }
 
-
-@media only screen and (min-width: 1025px) and (max-width:1200){
-
-    .intro article{
-        width: 75%;
-    }
-
-    .thumb{
-        flex-basis: 45%;
-    }
-
-
-    .mask{
-        font-size: 10px;
-    }
-
-    h1{
-        font-size: 40px;
-    }
-
-    p{
-        font-size: 20px;
-    }
-
-    h2{
-        font-size: 20px;
-        margin-bottom: 30px;
-    }
-
-}

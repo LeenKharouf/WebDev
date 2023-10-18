@@ -68,6 +68,7 @@ footer{
     align-items: center;
     position: relative;
     clear: both;
+    /* margin-top: 300px; */
 }
 
 footer p{
@@ -226,8 +227,6 @@ material-symbols-outlined{
     overflow: hidden;
     margin: 24px auto;
     margin-top: 0;
-    align-items: center;
-    text-align: center;
 }
 
 .mask{
@@ -269,8 +268,6 @@ material-symbols-outlined{
 .thumb:hover .mask{
     opacity: 1;
 }
-
-
 
 /* main{
     background-color: black;
@@ -360,8 +357,6 @@ aside img{
     -webkit-background-clip: text;
     transform: translateX(-0.02em);
   }
-
-  
   
   /* end of projects title */
 
@@ -398,7 +393,6 @@ aside img{
 	visibility: hidden;
 	opacity: 0;
 }
-
 
 
 

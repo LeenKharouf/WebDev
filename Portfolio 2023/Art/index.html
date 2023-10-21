@@ -9,16 +9,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- Title tag is the first thing you see as google search result and the title in the broswer tab -->
         <title>Leen Kharouf</title>
+        <link rel="icon" type="image/x-icon" href="../img/LK_logo.jpg">
         <link href="../css/art.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
         <!-- icons -->
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
         <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> -->
         
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/css/uikit.min.css" />
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/js/uikit-icons.min.js"></script>
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Nabla&display=swap" rel="stylesheet">
-        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Nabla&display=swap" rel="stylesheet">
+                
           
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
@@ -56,6 +68,20 @@
         /* flex-wrap: wrap; */
 
     }
+
+    main{
+        padding: 5%;
+    }
+
+    .menu li a{ 
+    color: white;
+   }
+
+   .menu li a:hover{ 
+    color: rgb(0, 0, 0);
+   }
+
+
 
     
 
@@ -119,32 +145,25 @@
    
     <main>
 
-    <!-- cool PROJECTS TITLE -->
-        <!-- <section class="wrapper">
-            <div class="top">Projects</div>
-            <div class="bottom" aria-hidden="true">Projects</div>
-          </section> -->
-
-
-          
-
-    <!-- <h2>Pinned Projects</h2>
-    <div class="gallery">
-            <img src="../img/pumpkin.JPG" alt="Lego Project"/>
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+            <div class="uk-card-media-left uk-cover-container">
+                <img src="../img/beige.JPG" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>
+            <div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">Media Left</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                </div>
+            </div>
+        </div>
+       
         
 
-            <img src="../img/flight.png" alt="Flight Reservation System"/>
-           
-
-            <img src="../img/parallax.png" alt="Parallax"/>
-                
-
-
-            <img src="../img/m5stack.png" alt="M5stack"/>
-                
-
-    </div> -->
 </main>
+
+
+
 
 <footer>
     <p>© Leen Kharouf</p>

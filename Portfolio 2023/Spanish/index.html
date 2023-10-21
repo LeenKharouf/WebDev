@@ -16,6 +16,40 @@
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
         <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> -->
     
+         <!-- UIkit CSS -->
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/css/uikit.min.css" />
+
+         <!-- UIkit JS -->
+         <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/js/uikit.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/js/uikit-icons.min.js"></script>
+ 
+
+        <style>
+            .thumb{
+                flex-basis: 30%;
+            }
+
+            .mask{
+                font-size: 15px;
+            }
+
+            .thumb img{
+                /* needs a start and end value. This is the start*/
+                transform: scale(1);
+                transform: rotate(0deg);
+                /* anything that changes */
+                transition: all 1s ease;
+            }
+
+            .thumb:hover img{
+                transform: scale(1) rotate(0);
+            }
+
+            main{
+                padding: 5%;
+            }
+
+        </style>
         <script>
             function toggleMenu(){
               // 
@@ -53,19 +87,21 @@
 
       <div class="intro">
 
+        
         <article>
+            
 
-            <h1>Hello, I'm Leen</h1>
+            
+            <h1>Hola, Soy Leen</h1>
             <p>
-                I'm a third year computer engineering student at NYU Abu Dhabi - welcome to my site!
-                Check out my recent projects down below or pay a visit to one of the pages in the nav bar
+                Bien
                 <!-- There are a lot of different (...and random) things to check out, so feel free to have a look around.  -->
             </p>
 
         </article>
 
         <aside>
-            <img src="../img/me.jpg" alt="this is me!">
+            <img src="../img/madrid.jpg" alt="this is me!">
             <!-- <a href="#" class="resume">Download Resume</a> -->
             <a href="../Resume_Oct23.pdf" class="resume" target="_blank" download="LeenKharoufResume">Download Resume</a>
         </aside>
@@ -85,33 +121,22 @@
     <!-- <h2>Pinned Projects</h2> -->
     <div class="container">
         <div class="thumb">
-            <img src="../img/lego.png" alt="Lego Project"/>
+            <img src="../img/arte.jpeg" alt="Lego Project"/>
             <article class="mask">
-                <h2>LEGO Design Project</h2>
-                <p>Scaling down a real-world building into
-                     several LEGO models using BrickLink, varying in fidelity and scale.</p>
-                
+                <h2>Arte Callejero</h2>
+                <p>Watch my oral presentation on the topic of Street Art in Latin America</p>
             
-                <a href="#">
-                    <span class="material-symbols-outlined">
-                        expand_circle_down
-                    </span>
-                </a>
-                
-
-                <a href="#">Coming Soon</a>
+                <a href="#">Watch</a>
 
             </article>
         </div>
 
         <div class="thumb">
-            <img src="../img/flight.png" alt="Flight Reservation System"/>
+            <img src="../img/passport.jpg" alt="Flight Reservation System"/>
             <article class="mask">
-                <h2>Flight Reservation System</h2>
-                <p>An interactive user interface to replicate real-world flight search and
-                    booking, using dynamic memory allocation, classes, and objected oriented
-                    programming concepts.</p>
-                <a href="#">Coming Soon</a>
+                <h2>Pasaporte de idiomas</h2>
+                <p>Check out my updated language passport</p>
+                <a href="#">Open Passport</a>
 
             </article>
         </div>
@@ -130,17 +155,35 @@
             </article>
         </div>
 
+        <br><br>
+        <br><br>
+        
+        <div class="uk-child-width-1-2@m" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="../img/parallax.png" width="1800" height="1200" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Media Top</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
 
-        <div class="thumb">
-            <img src="../img/m5stack.png" alt="M5stack"/>
-            <article class="mask">
-                <h2>Fall Detection Device Project</h2>
-                <p>Developed a fall-detecting device using Arduino programming and M5Stack
-                    Core2 hardware to detect falls with user-friendly features.</p>
-                    <a href="#">Coming Soon</a>
-
-            </article>
+            <div>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Media Bottom</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    <div class="uk-card-media-bottom">
+                        <img src="../img/parallax.png" width="1800" height="1200" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
+        
         <br><br>
 
     </div>

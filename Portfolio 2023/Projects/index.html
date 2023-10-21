@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!-- Declare HTML doctype for file -->
+<html lang="en">
+    <head>
+        <!-- Character set sttribute specifies character encoding.
+        Failure to state this may result in malformed font characters -->
+        <meta charset="utf-8" />
+        <!-- Viewport metatag is required for proper responsive rendering -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Title tag is the first thing you see as google search result and the title in the broswer tab -->
+        <title>Leen Kharouf</title>
+        <link rel="icon" type="image/x-icon" href="../img/LK_logo.jpg">
+        <link href="../css/art.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <!-- icons -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> -->
+        
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/css/uikit.min.css" />
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/js/uikit-icons.min.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Nabla&display=swap" rel="stylesheet">
+                
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+          
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+    
+    
+        .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+        font-size: 70px;
+        text-align: center;
+        }
+
+
+    /* .intro h1 {
+        
+        font-family: 'Chelsea Market', Inter;
+        font-size: 100px;
+        color: white;
+    }
+
+    .intro p{
+        /* font-family: Nabla, Inter; 
+        font-family: 'Chelsea Market', Inter;
+        color: white;
+    }
+
+    body{
+        background-color: rgb(214, 105, 37);
+    }
+
+    header img{
+        width: 50%;
+        filter: invert(100%);
+    }
+
+    header{
+        color: white;
+    }
+
+
+    .gallery{
+        display: flex;
+        
+
+    } */
+
+    main{
+        padding: 5%;
+    }
+
+    
+ 
+    :root {
+    --background-color: rgb(0, 0, 0);
+    --text-color: hsl(0, 0%, 100%);
+    }
+
+    .wrapper {
+    display: grid;
+    place-content: center;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    font-family: "Oswald", sans-serif;
+    font-size: clamp(1.2rem, 1rem + 15vw, 12rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-color);
+    /* margin-bottom: 5%; */
+    }
+
+    .wrapper > div {
+    grid-area: 1/1/-1/-1;
+    }
+    .top {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+    }
+    .bottom {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    color: transparent;
+    background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+    background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translateX(-0.02em);
+    }
+
+   .menu li a{ 
+    color: white;
+   }
+
+   header img{
+    filter: invert(100%);
+   }
+
+   header{
+    background-color: black;
+   }
+
+   .menu li a:hover{
+    color: rgb(215, 237, 45);
+   }
+
+   .wrapper a{
+    color: white;
+    text-align: center;
+   }
+
+   .smooth-scroll {
+        scroll-behavior: smooth;
+    }
+
+    html {
+    scroll-behavior: smooth;
+}
+
+    .uk-card-body button{
+        
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        padding: 2% 5%;
+        border: solid black;
+        border-radius: 15px;
+        transition: all 300ms ease-in-out;
+        
+    }
+
+    .uk-card-body button:hover{
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        padding: 2% 5%;
+        border: solid black;
+        border-radius: 15px;
+        
+    }
+
+        </style>
+        <script>
+            function toggleMenu(){
+              // 
+              const element = document.getElementById('menu');
+              // if it already has class open, remove it, if not, add it
+              element.classList.toggle('open');
+            }
+
+
+      
+          </script>
+
+    </head>
+
+    <body>
+        <header>
+            <a href="../home/home.html">
+                <img src="../img/LK_logo.png" alt="logo">
+              </a> 
+            
+            <!-- this is the menu icon that's hidden by default on desktop/tablet but shown on mobile-->
+            <!-- wraps around with just as much space needed, displays inline -->
+            <span class="mobile-menu" onclick="toggleMenu()">
+                <span class="material-icons">menu</span>
+            </span>
+            <!-- main nav: always an unordered list of links -->
+            <nav>
+            <!-- menu class for styling, ID for javascript -->
+            <ul class="menu" id="menu">
+                <li><a href="#">about</a></li>
+                <li><a href="index.html">projects</a></li>
+                <li><a href="../Art/index.html">art</a></li>
+            </ul>
+    
+            </nav>
+      </header>
+
+     
+
+      
+      <!-- <div class="intro"> -->
+    
+        <section class="wrapper">
+            <div class="top">projects</div>
+            <div class="bottom" aria-hidden="true">projects</div>
+            <a href="#project1" class="arrow smooth-scroll">
+                <span class="material-symbols-outlined">
+                    stat_minus_2
+                </span>
+            </a>
+          </section>
+
+    <!-- </div> -->
+   
+    <main id="project1">
+
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+            <div class="uk-card-media-left uk-cover-container">
+                <img src="../img/flight.png" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>
+            <div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">Flight Reservation System</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <a href="https://github.com/LeenKharouf/Flight.git" target="_blank"><button>View on Github</button></a>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+            <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                <img src="../img/m5stack2.png" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>           
+            <div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">Fall Detection Device</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <a href="https://drive.google.com/file/d/1WmbATi2RjhX6P3ns7bTPRXXEekUx0nl5/view?usp=sharing" target="_blank"><button>Check Out Demo</button></a>
+                </div>
+            </div>
+        </div>
+       
+        <br>
+
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+            <div class="uk-card-media-left uk-cover-container">
+                <img src="../img/parallax.png" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>
+            <div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">Parallax</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <a href="../Parallax/parallax.html"><button>Try it out!</button></a>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+            <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                <img src="../img/print.JPG" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>           
+            <div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">LeenKharouf.art</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <a href="https://www.instagram.com/leenkharouf.art/" target="_blank"><button>Go to Instagram</button></a>
+                    
+                </div>
+            </div>
+        </div>
+       
+        <br>
+
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+            <div class="uk-card-media-left uk-cover-container">
+                <img src="../img/lego.png" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>
+            <div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">LEGO Design Project</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <button>Go to Instagram</button>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+            <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
+                <img src="../img/dormdiner.png" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>           
+            <div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">DormDiner</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <button>Coming Soon</button>
+
+                    
+                </div>
+            </div>
+        </div>
+       
+        <br>
+
+        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+            <div class="uk-card-media-left uk-cover-container">
+                <img src="../img/madrid.jpg" alt="" uk-cover>
+                <canvas width="600" height="400"></canvas>
+            </div>
+            <div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">Spanish Dossier</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <a href="../Spanish/index.html"><button>Go to Dossier</button></a>
+</a>
+                </div>
+            </div>
+        </div>
+
+</main>
+
+
+
+
+<footer>
+    <p>© Leen Kharouf</p>
+    <br>
+    <p>Get in touch:</p>
+    
+    <p>leenkharouf@nyu.edu</p>
+    <img src="../img/giphy.gif" class="eyes"/>
+
+</footer>
+
+</body>
+  </html>
